@@ -1,14 +1,16 @@
 <%= render "layouts/error_messages" %>
-<%= form_with model: @post, local: true do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-  <div>
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-  <div>
-    <%= form.submit button_value  %>
+<div class="form-group">
+  <%= form_with model: @post, local: true do |form| %>
+    <div>
+      <%= form.text_field :title, class:"form-control" %>
+    </div>
+    <p></p>
+    <div>
+      <%= form.text_field :content, class:"form-control" %>
+    </div>
+    <p></p>
+    <div>
+      <%= form.submit button_value, class:"btn btn-primary"  %>
+    </div>
   </div>
 <% end %>
