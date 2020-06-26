@@ -1,9 +1,7 @@
 <% if @post.errors.any? %>
-  <div>
-    <ul>
-      <% @post.errors.full_message.each do |msg| %>
-        <li><span style ="color: :red;"><%= msg %></span></li>
-      <% end %>
-    </ul>
-  </div>
+  <% @post.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger" role="alert">
+      <li><span style ="color: :red;"><%= msg %></span></li>
+    </div>
+  <% end %>
 <% end %>
